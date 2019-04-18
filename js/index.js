@@ -1,13 +1,13 @@
 $(document).ready(function () {
   var isSuccess = false;
   if(localStorage.pwd) {
-    if (localStorage.pwd == md5("123456")) {
+    if (isLogin(localStorage.pwd)) {
       success();
     }
   }
   $(".login").click(function () {
     let pwd = $("#pwd").val();
-    if (pwd == md5("123456")) {
+    if (isLogin(pwd)) {
       localStorage.pwd = pwd;
       $(".message").text("登录成功").show();
       success();
@@ -24,4 +24,7 @@ $(document).ready(function () {
     $(".status2").show();
     chrome.tabs.executeScript(null, {file: "./js/main.js"});
   }
-})
+}) 
+function isLogin (pwd) {
+  return pwd == md5("123456");
+}

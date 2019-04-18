@@ -17,7 +17,7 @@
     }
   },
   "background":{
-    "page":"background.html"
+    "scripts": ["./js/jquery.min.js","./js/background.js"]
   },
   "permissions": [
     "tabs",
