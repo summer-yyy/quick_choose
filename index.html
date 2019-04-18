@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .main {
+    overflow: hidden;
+    width: 200px;
+  }
+  .login {
+    color: #fff;
+    background-color: #2db7f5;
+    border-color: #2db7f5;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 16px;
+    cursor: pointer;  
+    float: right;
+  }
+  .status2 {
+    display: none;
+  }
+  .message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    text-align: center;
+  }
+</style>
+<body>
+  <div class="main">
+    <h3>欢迎使用本程序</h3>
+    <div class="status1">
+      <input id="pwd" type="password" placeholder="请输入秘钥">
+      <div class="login">登录</div>
+    </div> 
+    <div class="status2">您已成功登录</div>
+    <div class="message"></div>
+  </div>
+</body>
+</html>
+<script src="js/jquery.min.js""></script>
+<script src="js/md5.min.js""></script>
+<script src="js/index.js""></script>
